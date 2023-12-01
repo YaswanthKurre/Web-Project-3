@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="fifteen.css" type="text/css">
+  <script src="fifteen.js"></script>
+  <title>Fifteen Puzzle Game</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1 style="text-align: center;">Fifteen Puzzle Game</h1>
+    <p>
+      The goal of the fifteen puzzles is to un-jumble its fifteen squares
+      by repeatedly making moves that slide squares into the empty space.
+      How quickly can you solve it?
+    </p>
+
+    <div id="initail-selection">
+      <div id="success-message"></div> 
+      <audio id="backgroundMusic" src="music.mp3" loop></audio>
+      <div id="restart_game"></div> 
+      <label for="background-selector">Choose Background:</label>
+      <select id="background-selector">
+        <option value="background1.jpg" selected>Super Mario</option>
+        <option value="background2.jpg">Phineas & Ferb</option>
+        <option value="background3.jpg">Tom & Jerry</option>
+        <option value="background4.jpg">Kid v/s Kat</option>
+      </select><br/><br/>
+
+      <label for="puzzle-size">Select Puzzle Size:</label>
+      <select id="puzzle-size">
+        <option value="3">3x3</option>
+        <option value="4" selected>4x4</option>
+        <option value="6">6x6</option>
+        <option value="8">8x8</option>
+        <option value="10">10x10</option>
+      </select>
+
+      <br/><br/>
+      <button id="generate-button" onclick="generatePuzzle()">Generate Puzzle</button>
+      <br/><br/>
+    </div>
+
+    <div id="puzzle-container"></div>
+    <div id="initail-selection">
+      <div id="shuffle-container" class="hidden">
+        <button id="shuffle-button" onclick="shufflePuzzle(startTimer)">Shuffle Puzzle</button>
+      </div>
+      <div id="moves" class="hidden">Moves: 0</div>
+      <div id="timer" class="hidden">Time Elapsed: 0 second(s)</div>
+    </div>
+
+    <p>
+      American puzzle author and mathematician Sam Loyd is often falsely
+      credited with creating the puzzle; indeed, Loyd claimed from 1891
+      until his death in 1911 that he invented it.
+      The puzzle was actually created around 1874 by Noyes Palmer Chapman,
+      a postmaster in Canastota, New York.
+    </p>
+    <footer>
+      <p>Project developed by Subhash and Yaswanth</p>
+      <div>
+        <a href="features.html">Extra Features</a>
+        <a href="kanban.html">Kanban Methodology</a>
+        <a href="summary.html">Project Summary</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
